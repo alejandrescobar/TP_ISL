@@ -8,7 +8,7 @@ module principal (
 
 //saidas normais
     output y1, 
-    output y0 
+    output y0, 
 
 
 //display
