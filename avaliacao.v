@@ -9,5 +9,5 @@ module principal (
     output y0 
 );
     assign y1 = e1 | (~e0 & p3) | (p2 & p1 & ~p0) | (p2 & p0 & ~p3); 
-    assign y2 = (e1 & ~p3) | (e1 & ~p2) | (e1 & p1 & p0) | (~e1 & e0) | (~e1 & p3); 
+    assign y0 = (e1 & ~p3) | (e1 & ~p2) | (e1 & p1 & p0) | (~e1 & e0) | (~e1 & p3); 
 endmodule
