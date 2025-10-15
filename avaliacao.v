@@ -41,7 +41,7 @@ module principal (
         
         
        //bit mais significativo
-        y1_fio <= e1 | (~e0 & p3) | (p2 & p1 & ~p0) | (p2 & p0 & ~p3); 
+        y1_fio <= e1 | (~e0 & p3) | (p3 & p2 & ~p1) | (p3 & p2 & ~p0); 
         
         // bit menos significativo
         y0_fio <= (e1 & ~p3) | (e1 & ~p2) | (e1 & p1 & p0) | (~e1 & e0) | (~e1 & p3);
