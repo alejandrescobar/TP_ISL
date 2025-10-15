@@ -8,7 +8,7 @@ module principal (
 
 //saidas normais
     output y1, 
-    output y0 ;
+    output y0 
 
 
 //display
@@ -24,11 +24,9 @@ module principal (
 //variaveis q vai armazenar o resultado do always
     
 );
-    reg y1_fio,
-    reg y0_fio,
-
+    reg y1_fio,y0_fio;
+     
     reg[6:0] segmentos;
-
 
     assign y1 = y1_fio;
     assign y0 = y0_fio;
@@ -43,22 +41,22 @@ module principal (
         
         
        //bit mais significativo
-        y1_reg <= e1 | (~e0 & p3) | (p2 & p1 & ~p0) | (p2 & p0 & ~p3); 
+        y1_fio <= e1 | (~e0 & p3) | (p2 & p1 & ~p0) | (p2 & p0 & ~p3); 
         
         // bit menos significativo
-        y0_reg <= (e1 & ~p3) | (e1 & ~p2) | (e1 & p1 & p0) | (~e1 & e0) | (~e1 & p3);
+        y0_fio <= (e1 & ~p3) | (e1 & ~p2) | (e1 & p1 & p0) | (~e1 & e0) | (~e1 & p3);
     end
 
 
 always @(*) begin
- case ({y1_reg, y0_reg}) 
-2'b00: segmentos_reg <= 7'b0001100; 
+ case ({y1_fio, y0_fio}) 
+2'b00: segmentos <= 7'b0001100; 
 
-2'b01: segmentos_reg <= 7'b1111010;
+2'b01: segmentos <= 7'b1111010;
 
-2'b10 segmentos_reg  <= 7'b1111100;
+2'b10: segmentos  <= 7'b1111100;
 
-2'b11 segmentos_reg  <= 7'b1110011;
+2'b11: segmentos <= 7'b1110011;
  endcase
     end
 
