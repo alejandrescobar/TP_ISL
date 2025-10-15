@@ -22,12 +22,12 @@ module principal (
 
 
 //variaveis q vai armazenar o resultado do always
-    reg y1_fio;
-    reg y0_fio;
+    
+);
+    reg y1_fio,
+    reg y0_fio,
 
     reg[6:0] segmentos;
-);
-
 
 
     assign y1 = y1_fio;
