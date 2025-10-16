@@ -21,7 +21,6 @@ module principal (
     output seg_g
 
 
-//variaveis q vai armazenar o resultado do always
     
 );
     reg y1_fio,y0_fio;
